@@ -95,6 +95,21 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="w-full bg-dark-gray h-full">
+        <div className="w-full h-full bg-black text-white grid xs:grid-cols-reverse-1 md:grid-cols-1 lg:grid-cols-2 text-center xs:px-5 lg:px-30 xl:px-64 xxl:px-80">
+          <div className="w-full h-full text-white flex justify-center items-center xs:order-last lg:order-first">
+            <div className="relative">
+              <Image className="" src={KidsProfile} alt=""/>
+            </div>
+          </div>
+          <div className="text-white flex flex-col justify-center xs:text-center lg:text-left xs:order-first lg:order-last">
+            <h1 className="xs:text-4xl md:text-5xl font-extrabold">Create profiles for kids</h1>
+            <p className="xs:text-xl md:text-2xl">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+          </div>
+        </div>
+      </div>
+
+
       <div className="w-full bg-dark-gray h-full text-white">
         <div className="w-full bg-black flex flex-col justify-center items-center py-8">
           <h1 className="xs:text-4xl md:text-5xl font-extrabold">Frequently Asked Questions</h1>
