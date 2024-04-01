@@ -3,9 +3,18 @@ import TVImg from "./assets/images/tv-img.png";
 import HeroSectionBGImage from "./assets/images/hero-bg-img.jpg";
 import StrangerImg from "./assets/images/mobile-stranger-img.jpg";
 import StrangerThings from "./assets/images/stranger-things.png";
+import AppleDesktop from "./assets/images/apple-desktop.png";
+import KidsProfile from "./assets/images/kids-profile.png";
 import DownloadIcon from "./assets/images/download-icon.gif";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import FAQ from "./components/Accordion/FAQ";
 
 export default function Home() {
+
+  const navigate = () =>{
+    redirect("/home")
+  }
   return (
     <div className="relative h-[43rem]">
       <div className="w-full absolute z-10 flex justify-between items-center xs:px-4 md:px-8 xl:px-64 py-4">
@@ -26,7 +35,7 @@ export default function Home() {
           <p className="text-xl">Ready to watch? Enter your email to create or restart your membership.</p>
           <div className="w-full flex xs:flex-col md:flex-row justify-center items-center gap-4">
             <input className="xs:w-full md:w-7/12 lg:w-5/12 xl:w-4/12 xxl:w-1/5 px-5 py-3.5 bg-light-black border border-gray rounded" placeholder="Email address"/>
-            <button className="bg-red text-2xl font-bold px-7 py-2 border border-red rounded">Get Started</button>
+            <Link href={'/home'}><button className="bg-red text-2xl font-bold px-7 py-2 border border-red rounded">Get Started</button></Link>
           </div>
         </div>
       </div>
@@ -65,6 +74,35 @@ export default function Home() {
           <div className="text-white flex flex-col justify-center xs:text-center lg:text-left xs:order-first lg:order-last">
             <h1 className="xs:text-4xl md:text-5xl font-extrabold">Download your shows to watch offline</h1>
             <p className="xs:text-xl md:text-2xl">Save your favourites easily and always have something to watch.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-dark-gray h-full py-2">
+        <div className="w-full h-full bg-black text-white grid xs:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 text-center xs:px-5 lg:px-30 xl:px-64 xxl:px-80">
+          <div className="text-white flex flex-col justify-center xs:text-center lg:text-left">
+            <h1 className="xs:text-4xl md:text-5xl font-extrabold">Watch everywhere</h1>
+            <p className="xs:text-xl md:text-2xl">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+          </div>
+          <div className="w-full h-full text-white flex justify-center items-center">
+            <div className="relative w-4/6">
+              <Image src={AppleDesktop} alt="" className=""/>
+              <video width={"100%"} loop muted autoPlay controls className="absolute top-[0] left-[0] right-[50%] bottom-[50%]">
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-dark-gray h-full text-white">
+        <div className="w-full bg-black flex flex-col justify-center items-center py-8">
+          <h1 className="xs:text-4xl md:text-5xl font-extrabold">Frequently Asked Questions</h1>
+          <FAQ/>
+          <p className="text-xl">Ready to watch? Enter your email to create or restart your membership.</p>
+          <div className="w-full flex xs:flex-col md:flex-row justify-center items-center gap-4 mt-3">
+            <input className="xs:w-full md:w-7/12 lg:w-5/12 xl:w-4/12 xxl:w-1/5 px-5 py-3.5 bg-light-black border border-gray rounded" placeholder="Email address"/>
+            <Link href={'/home'}><button className="bg-red text-2xl font-bold px-7 py-2 border border-red rounded">Get Started</button></Link>
           </div>
         </div>
       </div>
