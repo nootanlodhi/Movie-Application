@@ -26,6 +26,10 @@ body {
   }
   .background{
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-    background: rgb(0 0 0 / 40%);
+    background: rgba(0, 0, 0, 0.656);
+  }
+  .background-two{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    background: rgba(0, 0, 0, 0.656);
   }
 }
