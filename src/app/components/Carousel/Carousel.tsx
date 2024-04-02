@@ -46,13 +46,8 @@ function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className='h-screen w-full relative'>
-      <div className="absolute top-0 bottom-0 left-0 right-0 background-two text-center flex flex-col justify-center items-center gap-3 text-white xs:px-5 sm:px-16 md:px-10">
-        <div>
-            
-        </div>
-      </div>
-      <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-center bg-cover duration-500'></div>
+    <>
+      <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-screen bg-center bg-cover duration-500'></div>
       {/* Left Arrow */}
       <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
@@ -72,7 +67,7 @@ function Carousel() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
